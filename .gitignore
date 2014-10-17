@@ -1,2 +1,6 @@
+_cache/
+_drafts/
 _site/
+*.swp
 .sass-cache/
+.jekyll-assets-cache/

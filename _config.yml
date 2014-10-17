@@ -1,0 +1,88 @@
+---
+# ----------------------------- #
+#         SITE SETTINGS         #
+# ----------------------------- #
+
+# site title and other common site data settings
+title: Centerified
+email: askesian@outlook.com
+description: > # this means to ignore newlines until "baseurl:"
+  Experiments and musings of a FED
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://centerified.com" # the base hostname & protocol for your site
+
+# ----------------------------- #
+#   EXTERNAL SERVICES SETTINGS  #
+# ----------------------------- #
+
+twitter_username: askesian
+github_username:  askesian
+
+# ------- GITHUB PAGES -------- #
+github: {
+  "hostname": "centerified.com",
+  "pages_hostname": "askesian.github.io",
+  "api_url": "https://api.github.com",
+  "environment": "dotcom",
+  "owner_name": "askesian",
+  "owner_url": "https://github.com/askesian",
+  "repository_url": "https://github.com/askesian/centerified",
+  "repository_name": "centerified",
+  "is_user_page": false,
+  "is_project_page": true,
+  "show_downloads": true,
+  "url": "http://www.centerified.com"
+}
+
+# ----------------------------- #
+#        BUILD SETTINGS         #
+# ----------------------------- #
+
+# ------- JEKYLL ASSETS --------#
+assets:
+  sources:
+    - _assets/images
+    - _assets/javascripts
+    - _assets/stylesheets
+    - _assets/posts
+  css_compressor: sass
+  js_compressor:  uglifier
+  cache:          true
+
+zipballs:
+  sources: _downloads
+  dirname: downloads
+
+tags:
+  template: _layouts/archive
+
+categories:
+  template: _layouts/archive
+
+archives:
+  template: _layouts/archive
+
+# --------- INCLUDES -----------#
+
+# tell jekyll to copy over the .nojekyll into the destination directory
+# that GH will use to serve Pages. The presence of .nojekyll file in
+# gh-pages repo tells jekyll not to process the repo contents
+include:
+- .nojekyll
+
+# write the compiled jekyll output to the 'source' directory
+# this directory is a submodule of the gh-pages branch of the centerified repo
+destination: source
+markdown: kramdown
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - Rakefile
+  - .gitignore
+  - build.sh
+  - README.md
+  - .jekyll-assets-cache
+  - .sass-cache
+
+
