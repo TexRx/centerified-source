@@ -2,3 +2,4 @@
 	path = source
 	url = https://github.com/askesian/centerified.git
 	branch = gh-pages
+  ignore = dirty
