@@ -1,8 +1,8 @@
 #!/bin/bash
 set -e
-message=$1
 jekyll build
 cd ./source
 git add -A :/
-git commit -m '$message'
+message = "Site updated at #{Time.now.utc}"
+system "git commit -m #{message.inspect}"
 git push origin gh-pages
