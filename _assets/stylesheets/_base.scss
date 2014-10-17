@@ -35,8 +35,6 @@ ul, ol, dl, figure,
     margin-bottom: $spacing-unit / 2;
 }
 
-
-
 /**
  * Images
  */
@@ -80,7 +78,8 @@ li {
  * Headings
  */
 h1, h2, h3, h4, h5, h6 {
-    font-weight: 300;
+    font-family: $heading-font-family;
+    font-weight: 400;
 }
 
 
@@ -110,10 +109,11 @@ a {
 blockquote {
     color: $grey-color;
     border-left: 4px solid $grey-color-light;
-    padding-left: $spacing-unit / 2;
+    font-family: $heading-font-family;
     font-size: 18px;
+    // font-style: italic;
+    padding-left: $spacing-unit / 2;
     letter-spacing: -1px;
-    font-style: italic;
 
     > :last-child {
         margin-bottom: 0;
