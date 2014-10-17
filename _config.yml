@@ -81,7 +81,6 @@ exclude:
   - Rakefile
   - .gitignore
   - build.sh
-  - README.md
   - .jekyll-assets-cache
   - .sass-cache
 
